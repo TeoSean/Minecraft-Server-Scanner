@@ -3,23 +3,41 @@ import os
 import math
 import threading
 import time
+import sys
 
 masscan = []
 
 
+def helpmsg():
+    help_message = f'''
+    Usage: python {sys.argv[0]} [Input] [Output] [Version]
 
+    Input: Name of input file with server IPs (Generate me with masscan)
 
-print('Multithreaded mass minecraft server status checker by Footsiefat/Deathmonger')
+    Output: Where to save server IPs
 
-time.sleep(1)
+    Version: Version of Minecraft to target
 
-inputfile = input('What is the name of the text file with the server ips? (Including the .txt): ')
+    '''
+    print(help_message)
+    sys.exit()
 
-outputfile = input('What is the name of the text file you want to add the ips to? (Including the .txt): ')
+try:
 
-publicserverlist = input('What is the name of the text file with the public server ips? (Including the .txt): ')
+    inputfile = sys.argv[1]
 
-searchterm = input('What version are you targeting? (Leave blank for targeting all servers): ')
+    outputfile = sys.argv[2]
+
+    publicserverlist = 'public.txt'
+
+    try:
+        searchterm = sys.argv[3]
+
+    except:
+        searchterm = ''
+
+except:
+    helpmsg()
 
 outfile = open(outputfile, 'a+')
 outfile.close
