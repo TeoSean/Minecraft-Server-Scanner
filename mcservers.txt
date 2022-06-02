@@ -1,0 +1,12 @@
+==============================
+Time: 02 June 2022, 12:23:28
+IP: 198.23.199.132:25565
+Version: 1.7.10
+MOTD: GT New Horizons 2.1.2.3
+Players Online: 0/160
+==============================
+Time: 02 June 2022, 12:23:39
+IP: 61.82.99.147:25565
+Version: CraftBukkit 1.17.1
+MOTD: Kang Min Server
+Players Online: 0/20
